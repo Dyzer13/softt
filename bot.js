@@ -20,7 +20,7 @@ client.on('message', message => {
         embed.setTimestamp() // This will tell you what time the word was used at.
 
         guild = client.guilds.get("502796534522445824")
-        channel = guild.channels.find("id", "510204199749943296") // This will find the channel which it will send the log embed into.
+        channel = guild.channels.find("id", "513472595438338068") // This will find the channel which it will send the log embed into.
         channel.send(embed)
       }
 });
