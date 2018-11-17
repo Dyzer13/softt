@@ -7,7 +7,7 @@ const prefix = "S";
 client.on('message', message => {
 	if (message.channel.type == "dm") return;
 	if (message.member.hasPermission('ADMINISTRATOR')) return; // This ignores admins and lets them say bad words. If you don't want admins saying bad words, delete this line.
-    const swearWords = ["fuck","kiss","pussy","نصبو","ينصبو","نصابين"]; // These are the words that wll be filtered. If you would like to add more, simple add ,"word" inbetween the [ and ] and then it'll filter that word as well
+    const swearWords = ["fuck","kiss","pussy","نصبو","ينصبو","نصابين","كس امك","امك","قحبه"]; // These are the words that wll be filtered. If you would like to add more, simple add ,"word" inbetween the [ and ] and then it'll filter that word as well
     if (swearWords.some(word => message.content.toLowerCase().includes(word))) {
         message.delete();
         message.channel.send(`Hey ${message.author}! That word has been banned, please don't use it!`).then(m => m.delete(3000)); // This function will tell the user off for using the filtered words, and then the message which telsl the user off will be deleted after 3 seconds. If you would like to extend the time, feel free to change it but take note that it's measured in milliseconds. If you don't want the bot to remove the warning message, take off the ".then(m => m.delete(3000))" bit!
